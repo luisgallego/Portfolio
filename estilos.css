@@ -76,11 +76,9 @@ header nav
 	font-size: 20px;
 	margin: 2.2em 0 0 0;
 }
-#form input,
-#form textarea
+#form input
 {
 	padding: 13px;
-	display: block;
 	border: none;
 	border-radius: 3px;
 	background-color: #fff;
@@ -88,6 +86,10 @@ header nav
 	font-size: 25px;
 	text-align: center;
 	width: 12em;
+}
+#name
+{
+	display: block;
 }
 #form_container
 {
@@ -639,6 +641,15 @@ object
 
 #editor
 {
-width: 80%;
-margin: 0 10%;
+width: 100%;
+}
+
+.froala-element.f-basic
+{
+	height: 10em;
+	border-bottom: solid 1px grey !important; 
+}
+#email
+{
+	display: none;
 }

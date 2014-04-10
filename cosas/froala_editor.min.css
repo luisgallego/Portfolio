@@ -93,11 +93,15 @@
     color: #FFF;
     background-color: transparent!important
 }
+.froala-element.f-placeholder
+{
+
+}
 .froala-element.f-placeholder:before {
-    color: #ccc;
-    font-style: italic;
+    color: #bbb;
     content: attr(data-placeholder);
-    position: absolute
+    position: absolute;
+    font-size: 27px;
 }
 .froala-element.f-placeholder:before.f-basic {
     top: 10px;
@@ -233,7 +237,7 @@
     cursor: nw-resize
 }
 .froala-element.f-basic {
-  
+  border-radius: 0 0 3px 3px;
     padding: 10px;
     background:white;
 }
@@ -378,7 +382,9 @@
     padding: 0;
     z-index: 999;
     position: relative;
-    border-bottom: 0
+    border: 0;
+    border-radius: 3px 3px 0 0;
+    border-bottom: solid 1px #bbb !important;
 }
 .froala-editor.f-basic:before {
     display: none
