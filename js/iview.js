@@ -78,7 +78,7 @@
 			var iviewPreloader = $('#iview-preloader', iv.sliderContent);
 			var preloaderBar = $('div', iviewPreloader);
 			iviewPreloader.css({
-				top: ((iv.defs.height / 2) - (iviewPreloader.height() / 2)) + 'px',
+				top: ((iv.defs.height / 2) - (iviewPreloader.height() / 2)) - 4 + 'px',
 				left: ((iv.defs.width / 2) - (iviewPreloader.width() / 2)) + 'px'
 			});
 
