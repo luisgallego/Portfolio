@@ -618,6 +618,10 @@ header nav ul li a:focus
 	margin:0;
 
 }
+header input
+{
+margin: 70px 40px 43px 3px;
+}
 #navegacion input {
 width: 30%;
 }
