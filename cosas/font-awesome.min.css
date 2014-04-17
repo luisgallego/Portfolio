@@ -1,13 +1,4 @@
-@font-face {
-	font-family: FontAwesome;
-	src:url('../font/fonts/icomoon.eot?-mi6o5j');
-	src:url('../font/fonts/icomoon.eot?#iefix-mi6o5j') format('embedded-opentype'),
-		url('../font/fonts/icomoon.woff?-mi6o5j') format('woff'),
-		url('../font/fonts/icomoon.ttf?-mi6o5j') format('truetype'),
-		url('../font/fonts/icomoon.svg?-mi6o5j#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+
 
 
 .fa {
@@ -724,7 +715,7 @@ content:"\f091";
 }
 
 .fa-github-square:before {
-content:"\f092";
+content:"\e61e";
 }
 
 .fa-upload:before {

@@ -7,7 +7,7 @@
 	display: block;
 	min-width: 300px;
 	background: #000;
-	background: #2ecc71;
+	background: #ecf0f1;
 	position: relative;
 	margin: 0 auto;
 	overflow: hidden;
@@ -60,7 +60,7 @@
 }
 
 .iview-caption {
-	background: url('../../img/caption-bg.png');
+	background: #ecf0f1;
 	color: #FFF;
 	border-radius: 0;
 	padding: 10px 15px;
@@ -89,7 +89,7 @@
 }
 
 #iview-preloader div {
-	background: #fff;
+	background: #bdc3c7;
 }
 #iview-timer {
 	border-radius: 0;

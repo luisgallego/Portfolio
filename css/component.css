@@ -29,7 +29,7 @@
 	width: 0;
 	position: absolute;
 	pointer-events: none;
-	border-bottom-color: #ddd;
+	border-bottom-color: #ecf0f1;
 	border-width: 15px;
 	left: 50%;
 	margin: -15px 0 0 -15px;
@@ -37,7 +37,7 @@
 
 .og-expander {
 	position: absolute;
-	background: #ddd;
+	background: #ecf0f1;
 	top: auto;
 	left: 0;
 	width: 100%;
@@ -45,6 +45,8 @@
 	text-align: left;
 	height: 0;
 	overflow: hidden;
+	box-shadow: inset 0 -6px 0 #bdc3c7;
+
 }
 
 .og-expander-inner {
@@ -150,7 +152,7 @@
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	background: #ddd;
+	background: #ecf0f1;
 	box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
 	position: absolute;
 	top: 50%;
@@ -162,21 +164,21 @@
 }
 
 @-webkit-keyframes loader {
-	0% { background: #ddd; }
-	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+	0% { background: #ecf0f1; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ecf0f1; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ecf0f1, -15px 30px 1px #ccc; }
 }
 
 @-moz-keyframes loader {
-	0% { background: #ddd; }
-	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+	0% { background: #ecf0f1; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ecf0f1; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ecf0f1, -15px 30px 1px #ccc; }
 }
 
 @keyframes loader {
-	0% { background: #ddd; }
-	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+	0% { background: #ecf0f1; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ecf0f1; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ecf0f1, -15px 30px 1px #ccc; }
 }
 
 @media screen and (max-width: 830px) {

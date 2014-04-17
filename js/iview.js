@@ -1598,7 +1598,7 @@
 			/*El color de fondo de la barra de tiempo*/
 			timerBg: 'rgba(0, 0, 0, 0)',
 			/*El color de la barra de tiempo*/
-			timerColor: '#27ae60',
+			timerColor: '#bdc3c7',
 			/*La opacidad de la barra de tiempo*/
 			timerOpacity: 1,
 			/*El espacio que ocupa la barra ésa ↑ ( En el index lo cambiamos por el 70% )*/

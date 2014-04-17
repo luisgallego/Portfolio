@@ -84,6 +84,16 @@
     {
       display: none;
     }
+    header #social
+    {
+      width: 65%;
+      margin:0 !important;
+    }
+      header #social a
+    {
+      margin: 0 10px;
+      float: right;
+    }
     #slideshow_container
     {
       display: none;
@@ -124,7 +134,7 @@
         font-family: 'icomoon';
        content: "\e600";
        font-size: 50px;
-       color: #27ae60;
+       color: #fff;
     }
     #navegacion input
     {
@@ -211,3 +221,17 @@ a:hover {
   }
 }
 }
+@media screen and (max-width: 790px) {
+    header #social
+    {
+       margin: 20px 40px 0 3px;
+
+    }
+}
+@media screen and (max-width: 360px) {
+ header #social a
+    {
+      margin: 0 4px;
+      float: right;
+    }
+  }
