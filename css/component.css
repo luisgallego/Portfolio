@@ -69,7 +69,8 @@
 	position: absolute;
 	width: 100%;
 	top: 50%;
-	height: 1px;
+	border-radius: 2px;
+	height: 4px;
 	background: #888;
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);

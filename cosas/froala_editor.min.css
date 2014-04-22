@@ -47,6 +47,9 @@
     word-wrap: break-word;
     line-height: 120%
 }
+p{
+color:#B6B6B6
+}
 .froala-element * {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -506,7 +509,7 @@
 .froala-editor button:not(.fr-color-bttn).fr-bttn {
     padding: 0;
     background: 0 0;
-    color: #808080;
+    color: #B6B6B6;
     -moz-outline: 0;
     outline: 0;
     border: 0;
@@ -521,7 +524,7 @@
 .froala-editor button:not(.fr-color-bttn).fr-bttn:hover:not(:disabled),
 .froala-editor .fr-dropdown:hover button.fr-trigger:not(:disabled) {
     color: #FFF!important;
-    background: #2c82c9!important;
+    background: #B6B6B6!important;
     cursor: pointer;
     -webkit-transition: background .2s;
     -moz-transition: background .2s;
@@ -558,7 +561,7 @@
 }
 .froala-editor .fr-dropdown.active button.fr-trigger {
     color: #FFF;
-    background: #2c82c9
+    background: #B6B6B6
 }
 .froala-editor .fr-dropdown.active .fr-dropdown-menu {
     display: block
@@ -609,19 +612,19 @@
     padding: 5px 25px;
     display: block;
     text-decoration: none;
-    color: #353535;
+    color: #B6B6B6;
     outline: 0;
     white-space: nowrap;
     font-size: 14px;
     line-height: 130%
 }
 .froala-editor .fr-dropdown .fr-dropdown-menu li a:hover {
-    background: #353535!important;
+    background: #B6B6B6!important;
     color: #FFF!important
 }
 .froala-editor .fr-dropdown .fr-dropdown-menu li a.format_blockquote {
     font-style: italic;
-    color: #353535
+    color: #B6B6B6
 }
 .froala-editor .fr-dropdown .fr-dropdown-menu li a.format_pre {
     font-family: monospace, sans-serif
@@ -976,4 +979,8 @@ button.f-ok.f-unlink {
     padding: 5px 7px!important;
     font-size: 12px;
     line-height: 160%
+}
+.fr-trigger,.fr-bttn
+{
+    border-radius: 0 !important;
 }

@@ -88,12 +88,9 @@
     {
       width: 65%;
       margin:0 !important;
+      text-align: right;
     }
-      header #social a
-    {
-      margin: 0 10px;
-      float: right;
-    }
+    
     #slideshow_container
     {
       display: none;
@@ -231,7 +228,7 @@ a:hover {
 @media screen and (max-width: 360px) {
  header #social a
     {
-      margin: 0 4px;
-      float: right;
+      margin: 0 -3px;
+    
     }
   }
