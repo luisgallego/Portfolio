@@ -7,6 +7,8 @@
 	<script src="prefixfree.min.js"></script>
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="css/articulo.css">
+		<link rel="stylesheet" href="animate2.css">
+
 	<script src="js/modernizr.custom.js"></script>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<link rel="stylesheet" href="css/iview.css" />
@@ -30,7 +32,7 @@
 <body>
 	<header>
 		<figure>
-			<object type="image/svg+xml" data="logo.svg"><img src="logo.png" alt=""></object>
+			<object id="luis" type="image/svg+xml" data="logo.svg"><img src="logo.png" alt=""></object>
 		</figure>
 		<div id="navegacion">
 			<nav class="nav-collapse">
@@ -743,9 +745,78 @@
 		/*Fin del Script*/
 		</script>
 
+<script>
+	function viewport() {
+  	  var e = window, a = 'inner';
+  	  if (!('innerWidth' in window )) {
+  	      a = 'client';
+  	      e = document.documentElement || document.body;
+  	  }
+  	  return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+	}
+	
+	var ya = true
+	setInterval(function() {
+     	if($(document).scrollTop() >= 135 && viewport().width > 1210){
 
+			$('header').css({
+				"height": 50,
+				"position":"fixed",
+				"width":"100%",
+				"top":0,
+				"z-index":10000
+			});
+			$('header nav').css({
+				"margin-top":0
+			});
+			$('#social').css({
+				"margin-top":0
+			});
+			$("body").css({
+				"margin-top":135
+			});
+			$("#luis").css({
+				"display":"none"
+			});
+			if(!$('header').hasClass('fadeInDown')){
+				
+				$('header').addClass('animated fadeInDown');
+			}
+			ya = false;
+		}else if(!ya && viewport().width > 1210){
+				$('header').removeClass('animated fadeInDown');
+				$('header').css({
+					"height": 135,
+					"position":"static",
+					"width":"100%",
+					"top":0,
+					"z-index":10000,
+					"margin-top":0
+				});
+				$('header nav').css({
+					"margin-top":44
+				});
+				$('#social').css({
+					"margin-top":43
+				});
+				$("body").css({
+					"margin-top":0
+				});
+				
+				$("#luis").css({
+					"display":"inline-block"
+				});
+				$('html, body').animate({scrollTop: 0}, 500, "easeOutQuart");
+				ya = true
+
+			
+		}
+    }, 100);
+	
+</script>
         
 		<script>
+
 			$('.link_info').hover(function(){
 				$(this).parent().children('.caption').css({
 					display: 'block'

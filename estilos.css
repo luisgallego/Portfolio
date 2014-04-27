@@ -769,10 +769,11 @@ header #social
 #stScroll
 {
      width: 100%;
-     height: 17px;
+     height: 73px;
      overflow-x: scroll;
      overflow-y: hidden;
      top: 0;
+     margin-bottom: -73px;
      /*width: 60%;*/
 }
 #ensanchador
@@ -781,4 +782,8 @@ header #social
     width: 2000px;
     overflow: hidden;
     padding: 1em
+}
+.limitar
+{
+	margin-top: 73px !important;
 }
