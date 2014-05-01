@@ -712,38 +712,6 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
     </script>
-    
-
-<script>
-			/*Declarando algunas variables*/
-			$(document).ready(function(){
-				$('#iview').iView({
-					/*Duración de cada imagen ( Milisegundos )*/
-					pauseTime: 5000,
-					/*Permitir pausar cuando se pasa el ratón sobre la imagen ( Hover )*/
-					pauseOnHover: true,
-					/*La opacidad de las flechas de dirección cuando el hover acabe*/
-					directionNavHoverOpacity: 0,
-					/*El tipo de barra de tiempo */
-					timer: "Bar",
-					/*El espacio que ocupa la barra ésa ↑ */
-					timerDiameter: "100%",
-					/*El padding de la susodicha barra ( Espacio de más interno ) */
-					timerPadding: 0,
-					/*Grosor de la barra*/
-					timerStroke: 7,
-					/*Grosor del borde de la barra*/
-					timerBarStroke: 0,
-					/*Color de la barra*/
-					timerColor: "#44DB84",
-					/*Posición de la barra...*/
-					timerPosition: "top"
-				
-					/*Por el renglón 1538 de iview.js hay más opciones, pero sé cuidadoso*/
-				});
-			}); 
-		/*Fin del Script*/
-		</script>
 
 <script>
 	function viewport() {
@@ -754,6 +722,43 @@
   	  }
   	  return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
 	}
+	var keys = [37, 38, 39, 40];
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+function keydown(e) {
+    for (var i = keys.length; i--;) {
+        if (e.keyCode === keys[i]) {
+            preventDefault(e);
+            return;
+        }
+    }
+}
+
+function wheel(e) {
+  preventDefault(e);
+}
+
+function disable_scroll() {
+  if (window.addEventListener) {
+      window.addEventListener('DOMMouseScroll', wheel, false);
+  }
+  window.onmousewheel = document.onmousewheel = wheel;
+  document.onkeydown = keydown;
+}
+
+function enable_scroll() {
+    if (window.removeEventListener) {
+        window.removeEventListener('DOMMouseScroll', wheel, false);
+    }
+    window.onmousewheel = document.onmousewheel = document.onkeydown = null;  
+}
+
 	
 	var ya = true
 	setInterval(function() {
@@ -768,9 +773,11 @@
 			});
 			$('header nav').css({
 				"margin-top":0
+
 			});
 			$('#social').css({
-				"margin-top":0
+				"margin-top":0,
+				"margin-bottom":0
 			});
 			$("body").css({
 				"margin-top":135
@@ -784,6 +791,10 @@
 			}
 			ya = false;
 		}else if(!ya && viewport().width > 1210){
+				disable_scroll();
+				$('html, body').animate({scrollTop: 0}, 750, "easeOutBounce", function() {
+    			enable_scroll();
+				});
 				$('header').removeClass('animated fadeInDown');
 				$('header').css({
 					"height": 135,
@@ -797,7 +808,8 @@
 					"margin-top":44
 				});
 				$('#social').css({
-					"margin-top":43
+					"margin-top":43,
+					"margin-bottom":43
 				});
 				$("body").css({
 					"margin-top":0
@@ -806,16 +818,13 @@
 				$("#luis").css({
 					"display":"inline-block"
 				});
-				$('html, body').animate({scrollTop: 0}, 500, "easeOutQuart");
+				
 				ya = true
 
 			
 		}
     }, 100);
-	
-</script>
-        
-		<script>
+
 
 			$('.link_info').hover(function(){
 				$(this).parent().children('.caption').css({
@@ -840,8 +849,7 @@
 
 			});
 			
-		</script>
-		<script>
+		
 			$('#full').click(function() {
 			  $('#fullTut').show();
 			  $('#basTut').hide();
@@ -869,8 +877,6 @@
 			  $('#source').addClass('reading')
 			});
 
-		</script>
-		<script>
 		 $('#stScroll').on('scroll', function () {
     			$('pre.language-markup').scrollLeft($(this).scrollLeft());
 			});
